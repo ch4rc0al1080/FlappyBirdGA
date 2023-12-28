@@ -126,13 +126,13 @@ class Game():
                 del self.pipes[i]
 
         if self.interval == 0:
-            delta_bord = 50
-            pipe_holl = 120
-            holl_position = round(
-                random.random()*(self.height-delta_bord*2-pipe_holl))+delta_bord
-            self.pipes.append(Pipe(x=self.width, y=0, height=holl_position))
+            delta_board = 50
+            pipe_hole = 120
+            hole_position = round(
+                random.random()*(self.height-delta_board*2-pipe_hole))+delta_board
+            self.pipes.append(Pipe(x=self.width, y=0, height=hole_position))
             self.pipes.append(
-                Pipe(x=self.width, y=holl_position+pipe_holl, height=self.height))
+                Pipe(x=self.width, y=hole_position+pipe_hole, height=self.height))
 
         self.interval += 1
         if self.interval == self.spawn_interval:
